@@ -1,5 +1,5 @@
 @use 'variables' as v; 
-@use 'mixins' as m;
+
 
 /** Media Queries **/
 @mixin telefono {
@@ -39,7 +39,7 @@
         background-color: darken($color, 10);
     }
 
-    @include tablet {
+    @include m.tablet {
         width: auto;
         display: inline-block;
         
@@ -62,7 +62,7 @@
 }
 
 
-@mixin headingborder($colortexto, $colorlinea) {
+@mixin headingBorder($colortexto, $colorlinea) {
     
         font-size: 3.6rem;
         display: inline-block;
