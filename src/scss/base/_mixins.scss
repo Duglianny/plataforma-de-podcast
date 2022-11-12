@@ -39,10 +39,9 @@
         background-color: darken($color, 10);
     }
 
-    @include m.tablet {
+    @include tablet {
         width: auto;
-        display: inline-block;
-        
+        display: inline-block;       
     }
 }
 
@@ -62,26 +61,26 @@
 }
 
 
-@mixin headingBorder($colortexto, $colorlinea) {
+@mixin headingBorder( $colortexto, $colorlinea ) {
     
-        font-size: 3.6rem;
-        display: inline-block;
-        margin-top: 5rem;
-        color: $colortexto;
+    font-size: 3.6rem;
+    display: inline-block;
+    margin-top: 5rem;
+    color: $colortexto;
     
-        @include m.tablet{
-            margin-top: 0;
+    @include tablet{
+         margin-top: 0;
         }
     
     
-        &::after{
-            content: '';
-            background-color: $colorlinea;
-            display: block;
-            height: 1rem;
-            width: calc(100% + 1rem);
-            margin: -1.4rem 0 0 0;
-        }
+    &::after{
+        content: '';
+        background-color: $colorlinea;
+        display: block;
+        height: 1rem;
+        width: calc(100% + 1rem);
+        margin: -1.4rem 0 0 0;
+    }
     
     
 }

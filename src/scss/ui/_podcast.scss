@@ -5,8 +5,8 @@
 .crear-grid{
 
   @include m.tablet{
-  @include m.grid(2, 2rem);
-  align-items: center;
+    @include m.grid(2, 2rem);
+    align-items: center;
   }
 
   h2{
