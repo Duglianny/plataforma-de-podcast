@@ -60,6 +60,14 @@
     
 }
 
+@mixin iconobg($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: 50% 2rem;
+    background-size: 10rem;
+    
+}
+
 
 @mixin headingBorder( $colortexto, $colorlinea ) {
     
