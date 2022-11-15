@@ -1,5 +1,6 @@
 @use 'variables' as v; 
 
+
 /** Media Queries **/
 @mixin telefono {
     @media (min-width: v.$telefono) {
@@ -40,8 +41,7 @@
 
     @include tablet {
         width: auto;
-        display: inline-block;
-        
+        display: inline-block;       
     }
 }
 
@@ -49,4 +49,46 @@
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+
+@mixin bgimage($url, $colordegradado) {
+    background-image: linear-gradient($colordegradado 0%, $colordegradado 100%), url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    
+}
+
+@mixin iconobg($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: 50% 2rem;
+    background-size: 10rem;
+    
+}
+
+
+@mixin headingBorder( $colortexto, $colorlinea ) {
+    
+    font-size: 3.6rem;
+    display: inline-block;
+    margin-top: 5rem;
+    color: $colortexto;
+    
+    @include tablet{
+         margin-top: 0;
+        }
+    
+    
+    &::after{
+        content: '';
+        background-color: $colorlinea;
+        display: block;
+        height: 1rem;
+        width: calc(100% + 1rem);
+        margin: -1.4rem 0 0 0;
+    }
+    
+    
 }
